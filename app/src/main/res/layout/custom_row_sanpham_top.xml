@@ -4,6 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:layout_margin="2dp"
     android:gravity="center">
 
     <ProgressBar
@@ -23,7 +24,8 @@
             android:id="@+id/imageView"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:scaleType="centerInside" />
+            android:scaleType="centerInside"
+            android:src="@drawable/apple" />
 
         <TextView
             android:id="@+id/name"

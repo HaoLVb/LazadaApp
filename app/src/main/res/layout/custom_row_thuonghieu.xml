@@ -6,7 +6,6 @@
     android:layout_width="120dp"
     android:layout_height="120dp"
     android:layout_margin="2dp"
-    card_view:cardElevation="8dp"
     tools:ignore="NamespaceTypo">
 
     <FrameLayout

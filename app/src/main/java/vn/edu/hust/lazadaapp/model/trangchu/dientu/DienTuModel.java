@@ -33,7 +33,7 @@ public class DienTuModel {
         return instance;
     }
 
-    public ArrayList<ThuongHieu> getJsonThuongHieu() {
+    public ArrayList<ThuongHieu> getJsonThuongHieuLon() {
         ArrayList<ThuongHieu> thuongHieus = new ArrayList<>();
         ArrayList<HashMap<String, String>> hashMaps = new ArrayList<>();
 
@@ -59,7 +59,7 @@ public class DienTuModel {
         return thuongHieus;
     }
 
-    public ArrayList<SanPham> getJsonSanPham() {
+    public ArrayList<SanPham> getJsonTopDienThoai() {
         ArrayList<SanPham> sanPhams = new ArrayList<>();
         ArrayList<HashMap<String, String>> hashMaps = new ArrayList<>();
 
@@ -83,5 +83,31 @@ public class DienTuModel {
             e.printStackTrace();
         }
         return sanPhams;
+    }
+
+    public ArrayList<ThuongHieu> getJsonPhuKien() {
+        ArrayList<ThuongHieu> thuongHieus = new ArrayList<>();
+        ArrayList<HashMap<String, String>> hashMaps = new ArrayList<>();
+
+        HashMap<String, String> functionHashMap = new HashMap<>();
+        functionHashMap.put("function", "layDanhSachPhuKien");
+        hashMaps.add(functionHashMap);
+
+        String url = ApplicationData.DOMAIN + "/loaisanpham.php";
+        DownloadJSON downloadJSON = new DownloadJSON(url, hashMaps);
+        try {
+            String data = downloadJSON.execute().get();
+            JSONObject jsonObject = new JSONObject(data);
+            JSONArray jsonArray = jsonObject.getJSONArray("DANHSACHPHUKIEN");
+            for (int i = 0; i < jsonArray.length(); i++) {
+                ThuongHieu thuongHieu = new ThuongHieu(jsonArray.getJSONObject(i));
+                thuongHieus.add(thuongHieu);
+            }
+
+            LogManager.e(this, data);
+        } catch (InterruptedException | ExecutionException | JSONException e) {
+            e.printStackTrace();
+        }
+        return thuongHieus;
     }
 }

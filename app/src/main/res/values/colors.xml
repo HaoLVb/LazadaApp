@@ -14,6 +14,8 @@
     <color name="black">#25383C</color>
     <color name="line">#1194df</color>
     <color name="red">#e62326</color>
+    <color name="tranparentBlack">#B2000000</color>
+    <color name="colorWhite">#fff</color>
 
 
 </resources>

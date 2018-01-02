@@ -5,5 +5,10 @@ package vn.edu.hust.lazadaapp.presenter.trangchu.dientu;
  */
 
 public interface DienTuPresenterInterface {
-    void layDanhSachDienTu();
+
+    void getDanhSachTopDienThoai();
+
+    void getDanhSachThuongHieuLon();
+
+    void getDanhSachPhuKien();
 }

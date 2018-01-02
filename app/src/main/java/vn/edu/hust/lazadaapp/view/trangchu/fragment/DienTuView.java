@@ -10,5 +10,9 @@ import vn.edu.hust.lazadaapp.model.entity.ThuongHieu;
  */
 
 public interface DienTuView {
-    void hienThiThuongHieu(ArrayList<ThuongHieu> thuongHieus, ArrayList<SanPham> sanPhams);
+    void hienThiCacThuongHieuLon(ArrayList<ThuongHieu> thuongHieus);
+
+    void hienthiTopDienThoai(ArrayList<SanPham> dienthoaiList);
+
+    void hienThiDanhSachPhuKien(ArrayList<ThuongHieu> phuKienList);
 }

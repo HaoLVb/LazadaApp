@@ -26,6 +26,7 @@ public class MenuPresenter implements MenuPresentInterface {
         this.menuView = menuView;
     }
 
+    @Override
     public void layDanhSachMenu() {
         ArrayList<HashMap<String, String>> hashMaps = new ArrayList<>();
 
@@ -56,7 +57,7 @@ public class MenuPresenter implements MenuPresentInterface {
     public void layTokenFacebook() {
         DangNhapModel dangNhapModel = DangNhapModel.getInstance();
         AccessToken token = dangNhapModel.getTokenFacebook();
-        if(token!=null){
+        if (token != null) {
             menuView.hienthiUserFacebook(token);
         }
     }

@@ -158,9 +158,9 @@ public class MainActivity extends AppCompatActivity implements MenuView {
                     public void onCompleted(JSONObject object, GraphResponse response) {
                         try {
                             userName = object.getString("name");
-//                            if (menu != null) {
-                            setProfileUser(userName);
-//                            }
+                            if (menu != null) {
+                                setProfileUser(userName);
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

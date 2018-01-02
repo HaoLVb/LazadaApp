@@ -19,12 +19,25 @@ public class DienTuPresenter implements DienTuPresenterInterface {
         this.dienTuView = dienTuView;
     }
 
+
     @Override
-    public void layDanhSachDienTu() {
-        ArrayList<ThuongHieu> thuongHieus = DienTuModel.getInstance().getJsonThuongHieu();
-        ArrayList<SanPham> sanPhams = DienTuModel.getInstance().getJsonSanPham();
-        if (thuongHieus.size() > 0) {
-            dienTuView.hienThiThuongHieu(thuongHieus, sanPhams);
-        }
+    public void getDanhSachTopDienThoai() {
+        ArrayList<ThuongHieu> thuongHieus;
+        thuongHieus = DienTuModel.getInstance().getJsonThuongHieuLon();
+        dienTuView.hienThiCacThuongHieuLon(thuongHieus);
+    }
+
+    @Override
+    public void getDanhSachThuongHieuLon() {
+        ArrayList<SanPham> topDienThoais;
+        topDienThoais = DienTuModel.getInstance().getJsonTopDienThoai();
+        dienTuView.hienthiTopDienThoai(topDienThoais);
+    }
+
+    @Override
+    public void getDanhSachPhuKien() {
+        ArrayList<ThuongHieu> phuKienList;
+        phuKienList = DienTuModel.getInstance().getJsonPhuKien();
+        dienTuView.hienThiDanhSachPhuKien(phuKienList);
     }
 }

@@ -50,7 +50,7 @@ public class SanPhamTopAdapter extends RecyclerView.Adapter<SanPhamTopAdapter.Vi
         NumberFormat numberFormat = new DecimalFormat("###,###");
         String gia = numberFormat.format(sanPham.getGia());
         holder.giaText.setText(gia + " VNĐ ");
-        Picasso.with(context).load(sanPham.getAnhLon()).resize(140, 140).into(holder.imageView, new Callback() {
+        Picasso.with(context).load(sanPham.getAnhLon()).into(holder.imageView, new Callback() {
             @Override
             public void onSuccess() {
                 holder.progressBar.setVisibility(View.GONE);
