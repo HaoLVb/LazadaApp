@@ -5,5 +5,5 @@ package vn.edu.hust.lazadaapp;
  */
 
 public class ApplicationData {
-    public static final String DOMAIN = "http://192.168.0.106/lazada";
+    public static final String DOMAIN = "http://192.168.1.222/lazada";
 }

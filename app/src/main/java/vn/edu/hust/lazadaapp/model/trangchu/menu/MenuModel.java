@@ -69,6 +69,7 @@ public class MenuModel {
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
+        LogManager.e(MenuModel.this, sanPhams.toString());
         return sanPhams;
     }
 

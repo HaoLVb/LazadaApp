@@ -7,13 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.squareup.picasso.Callback;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
 
 import java.util.ArrayList;
+
+import javax.microedition.khronos.opengles.GL;
 
 import vn.edu.hust.lazadaapp.ApplicationData;
 import vn.edu.hust.lazadaapp.LogManager;
@@ -45,18 +50,20 @@ public class ThuongHieuAdapter extends RecyclerView.Adapter<ThuongHieuAdapter.Vi
     public void onBindViewHolder(final ViewHolder holder, int position) {
         final ThuongHieu thuongHieu = thuongHieus.get(position);
         holder.name.setText(thuongHieu.getTenThuongHieu());
-        LogManager.e(ThuongHieuAdapter.this, thuongHieu.getHinhThuongHieu());
-        Picasso.with(context).load(thuongHieu.getHinhThuongHieu()).into(holder.imageView, new Callback() {
+        Glide.with(context).load(thuongHieu.getHinhThuongHieu()).listener(new RequestListener<String, GlideDrawable>() {
             @Override
-            public void onSuccess() {
+            public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
                 holder.progressBar.setVisibility(View.GONE);
+                return false;
             }
 
             @Override
-            public void onError() {
-
+            public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                holder.progressBar.setVisibility(View.GONE);
+                return false;
             }
-        });
+        }).into(holder.imageView);
+
     }
 
     @Override
@@ -70,12 +77,12 @@ public class ThuongHieuAdapter extends RecyclerView.Adapter<ThuongHieuAdapter.Vi
         private ImageView imageView;
         private ProgressBar progressBar;
 
+
         ViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.name);
             imageView = itemView.findViewById(R.id.imageView);
             progressBar = itemView.findViewById(R.id.progressBar);
-
         }
     }
 }

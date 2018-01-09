@@ -3,6 +3,8 @@ package vn.edu.hust.lazadaapp.model.entity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 /**
  * Created by HaoLV on 1/2/2018.
  */
@@ -11,14 +13,20 @@ public class SanPham {
     private int maSanPham;
     private String tenSanPham;
     private int gia;
+    private int soLuong;
     private String anhLon;
     private String anhNho;
     private String thongTin;
-    private int soLuong;
     private int maLoaiSanPham;
     private int maThuongHieu;
     private int maNhanVien;
     private int luotMua;
+    private String tenNhanVien;
+    private ArrayList<ChiTietSanPham> chiTietList;
+    private int khuyenMai;
+
+    public SanPham() {
+    }
 
     public SanPham(int maSanPham, String tenSanPham, int gia, String anhLon, String anhNho,
                    String thongTin, int soLuong, int maLoaiSanPham,
@@ -45,6 +53,22 @@ public class SanPham {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    public String getTenNhanVien() {
+        return tenNhanVien;
+    }
+
+    public void setTenNhanVien(String tenNhanVien) {
+        this.tenNhanVien = tenNhanVien;
+    }
+
+    public int getKhuyenMai() {
+        return khuyenMai;
+    }
+
+    public void setKhuyenMai(int khuyenMai) {
+        this.khuyenMai = khuyenMai;
     }
 
     public int getMaSanPham() {
@@ -135,13 +159,32 @@ public class SanPham {
         this.luotMua = luotMua;
     }
 
+
+    public ArrayList<ChiTietSanPham> getChiTietList() {
+        return chiTietList;
+    }
+
+    public void setChiTietList(ArrayList<ChiTietSanPham> chiTietList) {
+        this.chiTietList = chiTietList;
+    }
+
     @Override
     public String toString() {
         return "SanPham{" +
                 "maSanPham=" + maSanPham +
                 ", tenSanPham='" + tenSanPham + '\'' +
                 ", gia=" + gia +
+                ", soLuong=" + soLuong +
                 ", anhLon='" + anhLon + '\'' +
+                ", anhNho='" + anhNho + '\'' +
+                ", thongTin='" + thongTin + '\'' +
+                ", maLoaiSanPham=" + maLoaiSanPham +
+                ", maThuongHieu=" + maThuongHieu +
+                ", maNhanVien=" + maNhanVien +
+                ", luotMua=" + luotMua +
+                ", tenNhanVien=" + tenNhanVien +
+                ", chiTietList=" + chiTietList +
+                ", khuyenMai=" + khuyenMai +
                 '}';
     }
 }

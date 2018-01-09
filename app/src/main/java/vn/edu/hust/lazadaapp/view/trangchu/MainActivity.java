@@ -140,6 +140,7 @@ public class MainActivity extends AppCompatActivity implements MenuView {
         mainAdapter.addFrag(BlankFragment.newInstance(), "Thời trang");
         mainAdapter.addFrag(BlankFragment.newInstance(), "Làm đẹp");
         viewPager.setAdapter(mainAdapter);
+        viewPager.setOffscreenPageLimit(2);
     }
 
     @Override

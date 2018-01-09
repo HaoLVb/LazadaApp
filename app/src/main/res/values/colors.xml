@@ -16,6 +16,7 @@
     <color name="red">#e62326</color>
     <color name="tranparentBlack">#B2000000</color>
     <color name="colorWhite">#fff</color>
+    <color name="colorSliderInActive">#8095a1</color>
 
 
 </resources>

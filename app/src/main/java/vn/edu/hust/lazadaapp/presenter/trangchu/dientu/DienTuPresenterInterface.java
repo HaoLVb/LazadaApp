@@ -11,4 +11,15 @@ public interface DienTuPresenterInterface {
     void getDanhSachThuongHieuLon();
 
     void getDanhSachPhuKien();
+
+    void getTopTivi();
+
+    void getDanhSachTienIch();
+
+    void getTopMayAnh();
+
+    void getDanhSachHangMoi();
+
+    void getDanhSachLogoThuongHieu();
+
 }

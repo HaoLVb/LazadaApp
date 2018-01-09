@@ -15,4 +15,14 @@ public interface DienTuView {
     void hienthiTopDienThoai(ArrayList<SanPham> dienthoaiList);
 
     void hienThiDanhSachPhuKien(ArrayList<ThuongHieu> phuKienList);
+
+    void hienThiDanhSachTivi(ArrayList<SanPham> tiviList);
+
+    void hienThiDanhSachTienIch(ArrayList<ThuongHieu> tienIchList);
+
+    void hienThiDanhSachTopMayAnh(ArrayList<SanPham> mayAnhList);
+
+    void hienThiDanhSachHangMoi(ArrayList<SanPham> hangMoiList);
+
+    void hienThiDanhSachLogoThuongHieu(ArrayList<ThuongHieu> logoList);
 }

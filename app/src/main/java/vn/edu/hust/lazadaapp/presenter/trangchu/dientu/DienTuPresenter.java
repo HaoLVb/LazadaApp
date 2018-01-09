@@ -22,16 +22,16 @@ public class DienTuPresenter implements DienTuPresenterInterface {
 
     @Override
     public void getDanhSachTopDienThoai() {
-        ArrayList<ThuongHieu> thuongHieus;
-        thuongHieus = DienTuModel.getInstance().getJsonThuongHieuLon();
-        dienTuView.hienThiCacThuongHieuLon(thuongHieus);
+        ArrayList<SanPham> topDienThoais;
+        topDienThoais = DienTuModel.getInstance().getJsonTopDienThoai();
+        dienTuView.hienthiTopDienThoai(topDienThoais);
     }
 
     @Override
     public void getDanhSachThuongHieuLon() {
-        ArrayList<SanPham> topDienThoais;
-        topDienThoais = DienTuModel.getInstance().getJsonTopDienThoai();
-        dienTuView.hienthiTopDienThoai(topDienThoais);
+        ArrayList<ThuongHieu> thuongHieus;
+        thuongHieus = DienTuModel.getInstance().getJsonThuongHieuLon();
+        dienTuView.hienThiCacThuongHieuLon(thuongHieus);
     }
 
     @Override
@@ -40,4 +40,40 @@ public class DienTuPresenter implements DienTuPresenterInterface {
         phuKienList = DienTuModel.getInstance().getJsonPhuKien();
         dienTuView.hienThiDanhSachPhuKien(phuKienList);
     }
+
+    @Override
+    public void getTopTivi() {
+        ArrayList<SanPham> tiviList;
+        tiviList = DienTuModel.getInstance().getJsonTopTivi();
+        dienTuView.hienThiDanhSachTivi(tiviList);
+    }
+
+    @Override
+    public void getDanhSachTienIch() {
+        ArrayList<ThuongHieu> tienIchList;
+        tienIchList = DienTuModel.getInstance().getJsonTienIch();
+        dienTuView.hienThiDanhSachTienIch(tienIchList);
+    }
+
+    @Override
+    public void getTopMayAnh() {
+        ArrayList<SanPham> mayAnhList;
+        mayAnhList = DienTuModel.getInstance().getJsonTopMayAnh();
+        dienTuView.hienThiDanhSachTopMayAnh(mayAnhList);
+    }
+
+    @Override
+    public void getDanhSachHangMoi() {
+        ArrayList<SanPham> hangMoiList;
+        hangMoiList = DienTuModel.getInstance().getJsonHangMoi();
+        dienTuView.hienThiDanhSachHangMoi(hangMoiList);
+    }
+
+    @Override
+    public void getDanhSachLogoThuongHieu() {
+        ArrayList<ThuongHieu> logoList;
+        logoList = DienTuModel.getInstance().getJsonLogoThuongHieu();
+        dienTuView.hienThiDanhSachLogoThuongHieu(logoList);
+    }
+
 }

@@ -24,7 +24,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen_10"
                 android:padding="@dimen/dimen_10"
-                android:text="Các thương hiệu lớn" />
+                android:text="Các thương hiệu lớn"
+                android:textColor="@color/bgLogo"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/thuongHieuLonRecyclerView"
@@ -38,7 +41,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dimen_10"
-                android:text="Top điện thoại và máy tính bảng" />
+                android:text="Top điện thoại và máy tính bảng"
+                android:textColor="@color/bgLogo"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/topDienThoaiRecyclerView"
@@ -58,7 +64,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dimen_10"
-                android:text="Phụ kiện" />
+                android:text="Phụ kiện"
+                android:textColor="@color/bgLogo"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/phuKienRecyclerView"
@@ -72,7 +81,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dimen_10"
-                android:text="Top hàng tivi, âm thanh, hình ảnh" />
+                android:text="Top hàng tivi, âm thanh, hình ảnh"
+                android:textColor="@color/bgLogo"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/topTiviRecyclerView"
@@ -92,7 +104,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dimen_10"
-                android:text="Tiện ích" />
+                android:text="Tiện ích"
+                android:textColor="@color/bgLogo"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/tienIchRecyclerView"
@@ -106,7 +121,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dimen_10"
-                android:text="Top Máy Ảnh và Phụ kiện" />
+                android:text="Top Máy Ảnh và Phụ kiện"
+                android:textColor="@color/bgLogo"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/topMayAnhRecyclerView"
@@ -115,8 +133,12 @@
                 android:padding="@dimen/dimen_10">
 
             </android.support.v7.widget.RecyclerView>
-        </LinearLayout>
 
+            <include
+                layout="@layout/layout_khuyenmai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
 

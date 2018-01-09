@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="vn.edu.hust.lazadaapp">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.trangchu.MainActivity"></activity>
+        <activity android:name=".view.trangchu.MainActivity" />
         <activity
             android:name=".view.manhinhchao.SplashActivity"
             android:theme="@style/SplashSceneStyle">
@@ -19,10 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.dangnhap.LoginActivity"></activity>
+        <activity android:name=".view.dangnhap.LoginActivity" />
 
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
 
+        <activity android:name=".view.danhmuc.SanPhamTheoDanhMucActivity" />
+        <activity android:name=".view.chitietsanpham.ChiTietSanPhamActivity"></activity>
     </application>
 
 </manifest>
